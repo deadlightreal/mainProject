@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: rgb(255, 255, 255);
 }
 
 .main {
@@ -16,6 +17,46 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.top {
+    width: 25vw;
+    height: 9.2vh;
+    background-color: rgba(232, 233, 235, 1);
+    border-radius: 30px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0);
+    top: 4%;
+    padding: 0;
+}
+
+.topR {
+    position: absolute;
+    left: 0%;
+    width: 54%;
+    height: 100%;
+    border-radius: 30px;
+    border: none;
+    background-color: rgba(121, 0, 248, 1);
+    font-weight: bold;
+    font-size: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
+
+.topL {
+    position: absolute;
+    right: 0%;
+    width: 54%;
+    height: 100%;
+    border-radius: 30px;
+    border: none;
+    background-color: rgba(120, 0, 248, 0);
+    font-weight: bold;
+    font-size: 35px;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .submit {
     background-color: rgba(121, 0, 248, 1);
     border-radius: 20px;
@@ -24,7 +65,7 @@ body {
     font-size: 2.3vw;
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    bottom: 4.5%;
+    bottom: 5vh;
     height: 8.5vh;
     position: absolute;
     left: 50%;
@@ -35,7 +76,7 @@ body {
 
 .inputs {
     background-color: rgba(250, 250, 250, 0);
-    bottom: 16vh;
+    bottom: 17vh;
     position: absolute;
     left: 50%;
     width: 25vw;
