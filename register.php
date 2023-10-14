@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <form action="createAccount.php" method="POST" class="main">
+        <div class="top">
+
+        </div>
+        <div class="inputs">
+            <input type="text" name="username" class="username" placeholder="Enter username" required> <br>
+            <input type="email" name="email" class="email" placeholder="Enter email" required> <br>
+            <input type="password" name="password" class="password" placeholder="Enter password" required>
+        </div>
+        <input type="submit" class="submit" value="Register">
+    </form>
 </body>
 </html>

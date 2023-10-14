@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    background-color: rgba(245, 245, 245, 1);
+    width: 29vw;
+    outline: solid;
+    outline-width: 3px;
+    height: 76vh;
+    border-radius: 25px;
+    left: 50vw;
+    top: 50vh;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.submit {
+    background-color: rgba(121, 0, 248, 1);
+    border-radius: 20px;
+    outline: none;
+    width: 25vw;
+    font-size: 2.3vw;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    bottom: 4.5%;
+    height: 8.5vh;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+    border: none;
+}
+
+.inputs {
+    background-color: rgba(250, 250, 250, 0);
+    bottom: 16vh;
+    position: absolute;
+    left: 50%;
+    width: 25vw;
+    height: 25vh;
+    transform: translate(-50%, 0);
+}
+
+.username {
+    width: 25vw;
+    height: 8vh;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    font-size: 27px;
+    bottom: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: rgba(232, 233, 235, 1);
+}
+
+.email {
+    width: 25vw;
+    height: 8vh;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    font-size: 27px;
+    bottom: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: rgba(232, 233, 235, 1);
+}
+
+.password {
+    width: 25vw;
+    height: 8vh;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    font-size: 27px;
+    bottom: 0%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: rgba(232, 233, 235, 1);
+}
+
+.submit:hover {
+    background-color: rgb(133, 20, 255);
+}
