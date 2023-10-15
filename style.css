@@ -205,3 +205,29 @@ body {
     transform: translate(-50%, 0);
     background-color: rgba(232, 233, 235, 1);
 }
+
+.user {
+    background-color: rgba(245, 222, 179, 0);
+
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    line-height: 5vh;
+    font-size: 25px;
+    height: 5vh;
+    outline: solid;
+    border: none;
+    cursor: pointer;
+    outline-width: 3px;
+}
+
+.usersMessages {
+    background-color: rgba(153, 205, 50, 0);
+    outline: solid;
+    outline-width: 3px;
+    bottom: 0px;
+    left: 0px;
+    width: 12vw;
+    height: 90vh;
+    position: absolute;
+}
