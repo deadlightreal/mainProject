@@ -10,19 +10,21 @@
     <div class="main">
         <div class="top">
             <form action="register.php">
-                <input type="submit" value="Register" class="topR">
+                <input type="submit" value="Register" class="LogintopR">
             </form>
             <form action="login.php">
-                <input type="submit" value="Login" class="topL">
+                <input type="submit" value="Login" class="LogintopL">
             </form>
         </div>
         <form action="findAccount.php" method="POST">>
             <div class="inputs">
                 <input type="text" name="username" class="username" placeholder="Enter username" required> <br>
-                <input type="email" name="email" class="email" placeholder="Enter email" required> <br>
-                <input type="password" name="password" class="password" placeholder="Enter password" required>
+                <input type="password" name="password" class="passwordL" placeholder="Enter password" required>
             </div>
-            <input type="submit" class="submit" value="Register">
+            <input type="submit" class="submitL" value="Login">
+        </form>
+        <form action="forgot.php">
+            <input type="submit" value="Forgot password?" class="submitForgot">
         </form>
     </div>
 </body>

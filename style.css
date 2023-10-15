@@ -57,6 +57,34 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.LogintopR {
+    position: absolute;
+    left: 0%;
+    width: 54%;
+    height: 100%;
+    border-radius: 30px;
+    border: none;
+    background-color: rgba(120, 0, 248, 0);
+    font-weight: bold;
+    font-size: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
+
+.LogintopL {
+    position: absolute;
+    right: 0%;
+    width: 54%;
+    height: 100%;
+    border-radius: 30px;
+    border: none;
+    background-color: rgba(121, 0, 248, 1);
+    font-weight: bold;
+    font-size: 35px;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .submit {
     background-color: rgba(121, 0, 248, 1);
     border-radius: 20px;
@@ -66,6 +94,40 @@ body {
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     bottom: 5vh;
+    height: 8.5vh;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+    border: none;
+}
+
+.submitForgot {
+    background-color: rgba(232, 233, 235, 1);
+    border-radius: 20px;
+    outline: none;
+    width: 25vw;
+    font-size: 2.3vw;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    bottom: 5vh;
+    height: 8.5vh;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+    border: none;
+}
+
+.submitL {
+    background-color: rgba(121, 0, 248, 1);
+    border-radius: 20px;
+    outline: none;
+    width: 25vw;
+    font-size: 2.3vw;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    bottom: 17vh;
     height: 8.5vh;
     position: absolute;
     left: 50%;
@@ -129,6 +191,17 @@ body {
     background-color: rgba(232, 233, 235, 1);
 }
 
-.submit:hover {
-    background-color: rgb(133, 20, 255);
+.passwordL {
+    width: 25vw;
+    height: 8vh;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    font-size: 27px;
+    bottom: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: rgba(232, 233, 235, 1);
 }
