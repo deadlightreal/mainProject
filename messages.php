@@ -11,27 +11,47 @@
         <?php
             include "database.php";
             session_start();
+            $username = $_SESSION["username"];
 
-            $selectUsers = "SELECT * FROM `users`";
+            $selectUsers = "SELECT * FROM `channels` WHERE `member1` LIKE '$username' OR `member2` LIKE '$username'";
             $displayUsers = mysqli_query($db, $selectUsers);
 
             while ($resultsUsers = mysqli_fetch_array($displayUsers)) {
-                echo '<form action="messagesDisplay" method="POST" class="userForm">';
-                echo '<input type="submit" class="user" value="' . $resultsUsers["username"] . '">';
+                echo '<form action="messages.php" method="POST" class="userForm">';
+                echo '<input type="hidden" name="id" value="' . $resultsUsers["id"] . '">';
+                echo '<input type="submit" class="user" value="' . $resultsUsers["name"] . '">';
                 echo '</form>';
             }
         ?>
 
     </div>
-    <?php
-        $username = $_SESSION["username"];
+    <div class="messages">
+        <?php
+            include "database.php";
+            $username = $_SESSION["username"];
+            if(isset($_POST["id"])) {
+                $chanelid = $_POST["id"];
+                $_SESSION["channelid"] = $_POST["id"];
 
-        $select = "SELECT * FROM `messages` WHERE `sender` LIKE '$username'";
-        $myMessages = mysqli_query($db, $select);
+                $code = "SELECT * FROM `messages` WHERE `to` LIKE '$chanelid'";
+                $displayMessages = mysqli_query($db, $code);
+                while ($resultsMessages = mysqli_fetch_array($displayMessages)) {
+                    echo '<div>' . $resultsMessages["content"] . '</div>';
+                }
+            }
+            else if(isset($_SESSION["channelid"])) {
+                $chanelid = $_SESSION["channelid"];
 
-        while ($resultMy = mysqli_fetch_array($myMessages)) {
-            echo '<div>' . $resultMy["content"] . '</div>';
-        }
-    ?>
+                $code = "SELECT * FROM `messages` WHERE `to` LIKE '$chanelid'";
+                $displayMessages = mysqli_query($db, $code);
+                while ($resultsMessages = mysqli_fetch_array($displayMessages)) {
+                    echo '<div>' . $resultsMessages["content"] . '</div>';
+                }
+            }
+            else {
+
+            }
+        ?>
+    </div>
 </body>
 </html>
