@@ -7,10 +7,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <form action="createChannel.php">
+        <input type="submit" value="Create New Message Channel">
+    </form>
+    <form action="sendMessage.php" method="POST">
+        <?php
+            session_start();
+            include "database.php";
+            if(isset($_POST["id"])) {
+                echo '<input type="hidden" name="id" value="' . $_POST["id"] . '">';
+                echo '<input type="text" name="content" id="content" class="content">';
+                echo '<input type="submit" class="sendMessage" value="Send Message">';
+            }
+            else if(isset($_SESSION["channelid"])) {
+                echo '<input type="hidden" name="id" value="' . $_SESSION["channelid"] . '">';
+                echo '<input type="text" name="content" id="content" class="content">';
+                echo '<input type="submit" class="sendMessage" value="Send Message">';
+            }
+            else {
+
+            }
+        ?>
+    </form>
     <div class="usersMessages">
         <?php
-            include "database.php";
-            session_start();
             $username = $_SESSION["username"];
 
             $selectUsers = "SELECT * FROM `channels` WHERE `member1` LIKE '$username' OR `member2` LIKE '$username'";

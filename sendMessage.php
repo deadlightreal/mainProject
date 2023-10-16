@@ -1,0 +1,10 @@
+<?php
+    include "database.php";
+    $to = $_POST["id"];
+    $username = $_SESSION["username"];
+    $content = $_POST["content"];
+
+    $code = "INSERT INTO `messages` (`content`, `sender`, `to`) VALUES ('$content', '$username', '$to')";
+    $insert = mysqli_query($db, $code);
+    header("Location: messages.php");
+?>

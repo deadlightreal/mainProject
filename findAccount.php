@@ -12,7 +12,7 @@
     if(isset($row["username"])) {
         if($password == $row["password"]) {
             echo "Logged in!!!";
-            header("Location: home.php");
+            header("Location: messages.php");
             $_SESSION["username"] = $row["username"];
         }
         else {
