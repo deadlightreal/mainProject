@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(isset($_SESSION["username"])) {
-        header("Location: home.php");
+        header("Location: messages.php");
     }
 ?>
 <!DOCTYPE html>

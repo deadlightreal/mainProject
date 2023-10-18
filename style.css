@@ -207,13 +207,59 @@ body {
 }
 
 .messages {
-    width: 88vw;
-    height: 90vh;
-    bottom: 0;
-    right: -0.1vw;
+    width: 87.9vw;
+    height: 83.9vh;
+    top: 10vh;
+    right: 0vw;
     outline: solid;
     outline-width: 3px;
     position: absolute;
+}
+
+.content {
+    width: 77.3%;
+    height: 89%;
+    outline: solid;
+    outline-width: 3px;
+    bottom: 0;
+    position: absolute;
+    left: 0.1vw;
+}
+
+.SendMessageDiv {
+    background-color: rgba(255, 0, 0, 0);
+    width: 88vw;
+    height: 6vh;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.sendMessage {
+    width: 22%;
+    outline: solid;
+    outline-width: 3px;
+    border: none;
+    height: 100%;
+    cursor: pointer;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 30px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.sender {
+    font-weight: bold;
+}
+
+.otherMessage {
+
+}
+
+.myMessage {
+    margin-left: 83vw;
 }
 
 .user {
@@ -226,6 +272,7 @@ body {
     font-size: 25px;
     height: 5vh;
     outline: solid;
+    margin-bottom: 0.3vh;
     border: none;
     cursor: pointer;
     outline-width: 3px;

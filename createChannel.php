@@ -7,8 +7,7 @@
 </head>
 <body>
     <form action="createNewChanell.php" method="POST">
-        <input type="text" name="name" id="name" placeholder="Enter chanell name">
-        <input type="text" name="member2" id="member2" placeholder="Enter username of another member">
+        <input type="text" name="name" id="name" placeholder="Enter chanell name" required>
         <input type="submit" value="Create chanell">
     </form>
 </body>
