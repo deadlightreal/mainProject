@@ -239,7 +239,7 @@ body {
     width: 22%;
     outline: solid;
     outline-width: 3px;
-    border: none;
+    border: none;   
     height: 100%;
     cursor: pointer;
     background-color: transparent;
@@ -252,15 +252,53 @@ body {
 
 .sender {
     font-weight: bold;
+    background-color: rgba(255, 0, 0, 0);
+    font-size: 15px;
+    width: 100%;
+    margin-left: auto;
 }
 
 .otherMessage {
+    background-color: #3575ff;
+    color: #000000;
+    border-radius: 15px;
+    margin-bottom: 2vh;
+    text-align: left;
+    word-break: break-all;
+    max-width: calc(40% - 14px);
+    width: fit-content;
+    margin-right: auto;
+    padding: 7px;
+}
 
+.messagecontent {
+    word-break: break-all;
+    background-color: rgba(255, 0, 0, 0);
+    margin-left: auto;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
 }
 
 .myMessage {
-    margin-left: 83vw;
+    background-color: #4caf50;
+    color: #000000;
+    border-radius: 15px;
+    margin-bottom: 2vh;
+    text-align: right;
+    word-break: break-all;
+    max-width: calc(40% - 14px);
+    width: fit-content;
+    margin-left: auto;
+    padding: 7px;
 }
+
+
+
+
+
 
 .user {
     background-color: rgba(245, 222, 179, 0);

@@ -10,13 +10,13 @@
     if ($resultsMessages["sender"] == $username) {
         echo '<div class="myMessage">';
         echo '<div class="sender">' . $resultsMessages["sender"] . '</div>';
-        echo '<div>' . $resultsMessages["content"] . '</div>';
+        echo '<div class="messagecontent">' . $resultsMessages["content"] . '</div>';
         echo '</div>';
     }
     else {
         echo '<div class="otherMessage">';
         echo '<div class="sender">' . $resultsMessages["sender"] . '</div>';
-        echo '<div>' . $resultsMessages["content"] . '</div>';
+        echo '<div class="messagecontent">' . $resultsMessages["content"] . '</div>';
         echo '</div>';
     }
     }
