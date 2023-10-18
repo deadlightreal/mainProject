@@ -7,6 +7,9 @@
     else if (isset($_SESSION["channelid"])) {
         $id = $_SESSION["channelid"];    
     }
+    else {
+        $id = 0;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,13 +22,16 @@
     <meta http-equiv="refresh" content="10">
     <script>
         $(document).ready(function() {
-            $("#btn").click(function() {
-                var id = $id;
-                $("#messages").load("load-messages.php", {
-                    channelID: id
-                });
+        var id = <?php echo $id; ?>;
+
+        function loadMessages() {
+            $("#messages").load("load-messages.php", {
+                channelID: id
             });
-        });
+        }
+        loadMessages();
+        setInterval(loadMessages, 1000);
+    });
     </script>
 </head>
 <body>
@@ -107,43 +113,15 @@
     </div>
     <div class="messages" id="messages">
         <?php
-            include "database.php";
-            $username = $_SESSION["username"];
-            if(isset($_POST["id"])) {
-                $chanelid = $_POST["id"];
-                $_SESSION["channelid"] = $_POST["id"];
+        if (isset($_SESSION["channelid"])) {
 
-                    $code = "SELECT * FROM `messages` WHERE `to` LIKE '$chanelid'";
-                    $displayMessages = mysqli_query($db, $code);
-                    while ($resultsMessages = mysqli_fetch_array($displayMessages)) {
-                        if ($resultsMessages["sender"] == $username) {
-                            echo '<div class="myMessage">';
-                            echo '<div class="sender">' . $resultsMessages["sender"] . '</div>';
-                            echo '<div>' . $resultsMessages["content"] . '</div>';
-        
-                            echo '</div>';
-                        }
-                        else {
-                            echo '<div class="otherMessage">';
-                            echo '<div class="sender">' . $resultsMessages["sender"] . '</div>';
-                            echo '<div>' . $resultsMessages["content"] . '</div>';
-        
-                            echo '</div>';
-                        }
-                    }
-            }
-            else if(isset($_SESSION["channelid"])) {
-                $chanelid = $_SESSION["channelid"];
+        }
+        else if (isset($_POST["id"])) {
+            $_SESSION["channelid"] = $_POST["id"];
+        }
+        else {
 
-                $code = "SELECT * FROM `messages` WHERE `to` LIKE '$chanelid'";
-                $displayMessages = mysqli_query($db, $code);
-                while ($resultsMessages = mysqli_fetch_array($displayMessages)) {
-                    echo '<div>' . $resultsMessages["content"] . '</div>';
-                }
-            }
-            else {
-
-            }
+        }
         ?>
     </div>
 </body>
