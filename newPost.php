@@ -7,8 +7,8 @@
 </head>
 <body>
     <form action="addPost.php" method="POST" enctype="multipart/form-data">
-        <input type="file" name="file" id="file" >
-        <input type="text" name="description" id="description">
+        <input type="file" name="file" id="file" required>
+        <input type="text" name="description" id="description" required>
         <input type="submit" value="Add Post">
     </form>
 </body> 
