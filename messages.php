@@ -1,11 +1,22 @@
 <?php
-    session_start();
+session_start();
+if (isset($_POST["id"])) {
+    $_SESSION["channelid"] = $_POST["id"];
+}
+else if (isset($_SESSION["channelid"])) {
+
+}
+else {
+
+}
+?>
+<?php
     include("database.php");
     if (isset($_POST["id"])) {
         $id = $_POST["id"];
     }
     else if (isset($_SESSION["channelid"])) {
-        $id = $_SESSION["channelid"];    
+        $id = $_SESSION["channelid"];   
     }
     else {
         $id = 0;
@@ -28,7 +39,14 @@
                 channelID: id
             });
         }
+        function loadChannels() {
+            $("#usersMessages").load("loadChannels.php", {
+                channelID: id
+            });
+        }
+        loadChannels();
         loadMessages();
+        setInterval(loadChannels, 1000);
         setInterval(loadMessages, 1000);
     });
     </script>
@@ -75,52 +93,10 @@
             }
         ?>
     </form>
-    <div class="usersMessages">
-        <?php
-            $username = $_SESSION["username"];
-
-            $selectUsers = "SELECT * FROM `channels` WHERE `member1` LIKE '$username'";
-            $displayUsers = mysqli_query($db, $selectUsers);
-
-            while ($resultsUsers = mysqli_fetch_array($displayUsers)) {
-                echo '<form action="messages.php" method="POST" class="userForm">';
-                echo '<input type="hidden" name="id" value="' . $resultsUsers["id"] . '">';
-                echo '<input type="submit" class="user" value="' . $resultsUsers["name"] . '">';
-                echo '</form>';
-            }
-        ?>
-        <?php
-            $selectChannels = "SELECT * FROM `invited` WHERE `invited` LIKE '$username'";
-            $displayChannels = mysqli_query($db, $selectChannels);
-
-            while ($resultsChannels = mysqli_fetch_array($displayChannels)) {
-                $invitedid = $resultsChannels["chanellid"];
-
-                $selectInvited = "SELECT * FROM `channels` WHERE `id` LIKE '$invitedid'";
-                $doSelectedInvited = mysqli_query($db, $selectInvited);
-
-                while ($resultsSelectedInvited = mysqli_fetch_array($doSelectedInvited)) {
-                    echo '<form action="messages.php" method="POST" class="userForm">';
-                    echo '<input type="hidden" name="id" value="' . $resultsSelectedInvited["id"] . '">';
-                    echo '<input type="submit" class="user" value="' . $resultsSelectedInvited["name"] . '">';
-                    echo '</form>';
-                }    
-            }
-        ?>
-
+    <div class="usersMessages" id="usersMessages">
     </div>
     <div class="messages" id="messages">
-        <?php
-        if (isset($_SESSION["channelid"])) {
 
-        }
-        else if (isset($_POST["id"])) {
-            $_SESSION["channelid"] = $_POST["id"];
-        }
-        else {
-
-        }
-        ?>
     </div>
 </body>
 </html>
