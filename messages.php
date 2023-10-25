@@ -1,16 +1,4 @@
 <?php
-session_start();
-if (isset($_POST["id"])) {
-    $_SESSION["channelid"] = $_POST["id"];
-}
-else if (isset($_SESSION["channelid"])) {
-
-}
-else {
-
-}
-?>
-<?php
     include("database.php");
     if (isset($_POST["id"])) {
         $id = $_POST["id"];
@@ -20,6 +8,14 @@ else {
     }
     else {
         $id = 0;
+    }
+?>
+<?php
+    session_start();
+    if(isset($_SESSION["username"])) {
+    }
+    else {
+        header("Location: login.php");
     }
 ?>
 <!DOCTYPE html>
@@ -52,6 +48,11 @@ else {
     </script>
 </head>
 <body>
+    <div class="topMenu">
+        <a class="topButton" href="home.php">home</a>
+        <a class="topButton" href="newPost.php">create</a>
+        <a class="topButton" href="messages.php">messages</a>
+    </div>
     <form action="createChannel.php">
         <input type="submit" value="Create New Message Channel">
     </form>
