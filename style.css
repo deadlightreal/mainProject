@@ -40,6 +40,86 @@ body {
     background-color: #3575ff00;
 }
 
+.accountMain {
+    background-color: rgba(232, 233, 235, 1);
+    width: 35vw;
+    height: 70vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7vh;
+    border-radius: 15px;
+}
+.statsName {
+    display: flex;
+    background-color: rgb(255, 0, 0);
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    margin-top: -10%;
+    justify-content: center;
+}
+
+.statNumberName {
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 0.5;
+    padding: 0px 0px;
+    margin-right: 25px;
+    margin-top: -0%;
+    text-align: center;
+    background-color: rgba(0, 0, 255, 0);
+    border: none;
+    cursor: pointer;
+}
+
+.statNumberNameLikes {
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 0.5;
+    padding: 0px 0px;
+    margin-right: 25px;
+    margin-top: -65%;
+    text-align: center;
+    background-color: rgba(0, 0, 255, 0);
+}
+
+.accountFollowers {
+    margin-top: -67%;
+}
+
+.accountUsername {
+    width: 100%;
+    height: 5vh;
+    background-color: rgba(255, 0, 0, 0);
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    padding-top: 7px;
+}
+
+.stats {
+    display: flex;
+    background-color: rgba(255, 0, 0, 0);
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    margin-top: 10%;
+    justify-content: space-around;
+}
+
+.statNumber {
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 28px;
+    letter-spacing: 0.5;
+    padding: 0 40px;
+}
+
 .topButton {
     position: relative;
     text-decoration: none;
@@ -47,7 +127,7 @@ body {
     color: #a0a0a0;
     font-size: 28px;
     letter-spacing: 0.5;
-    padding: 0 10px;
+    padding: 0 22px;
 }
 
 .topButton::after{

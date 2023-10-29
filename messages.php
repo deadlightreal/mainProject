@@ -49,9 +49,11 @@
 </head>
 <body>
     <div class="topMenu">
-        <a class="topButton" href="home.php">home</a>
-        <a class="topButton" href="newPost.php">create</a>
-        <a class="topButton" href="messages.php">messages</a>
+        <a class="topButton" href="home.php">Home</a>
+        <a class="topButton" href="search.php">Search</a>
+        <a class="topButton" href="newPost.php">Create</a>
+        <a class="topButton" href="messages.php">Messages</a>
+        <a class="topButton" href="account.php">Account</a>
     </div>
     <form action="createChannel.php">
         <input type="submit" value="Create New Message Channel">
