@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include("database.php");
     if (isset($_POST["id"])) {
         $id = $_POST["id"];
@@ -11,7 +12,6 @@
     }
 ?>
 <?php
-    session_start();
     if(isset($_SESSION["username"])) {
     }
     else {
