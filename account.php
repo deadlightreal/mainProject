@@ -17,10 +17,14 @@
     <div class="accountMain">
         <?php
             include("database.php");
-            session_start();
-
+            session_start();            
             if (isset($_SESSION["username"])) {
-                $username = $_SESSION["username"];
+                if (isset($_POST["accountName"])) {
+                    $username = $_POST["accountName"];
+                }
+                else { 
+                    $username = $_SESSION["username"];
+                }   
                 echo '<div class="accountUsername">' . $username . '</div>';
 
                 $code = "SELECT * FROM `users` WHERE `username` LIKE '$username'";
@@ -33,9 +37,11 @@
                     echo '</div>';
                     echo '<div class="stats">';
                     echo '<form action="followers.php" method="POST" class="accountFollowers">';
+                    echo '<input type="hidden" name="AccountUsername" value="' . $username . '"></input>';
                     echo '<input type="submit" class="statNumberName" value="Followers"></input>';
                     echo '</form>';
                     echo '<form action="following.php" method="POST" class="accountFollowers">';
+                    echo '<input type="hidden" name="AccountUsername" value="' . $username . '"></input>';
                     echo '<input type="submit" class="statNumberName" value="Following"></input>';
                     echo '</form>';
                     echo '<div class="statNumberNameLikes"> Likes </div>';

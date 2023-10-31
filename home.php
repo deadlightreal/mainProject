@@ -57,7 +57,11 @@
                     echo '</form>';
                 }
             }
-            echo '<div>' . $row["owner"] . '</div>';
+            echo '<form action="account.php" method="POST">';
+            echo '<input type="hidden" name="accountName" value="' . $row['owner'] . '"></input>';
+            echo '<input type="submit" value="' . $row["owner"] . '"></input>';
+            echo '</form>';
+
             echo '<img src="posts/' . $row['id'] . '.' . $row['extention'] . '" width="500" height="500"></img>';
             echo '<div>' . $row['description'] . '</div>';
 

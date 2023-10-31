@@ -363,6 +363,15 @@ a:hover::after {
     position: absolute;
 }
 
+.searchUsers {
+    width: 30vw;
+    height: 88vh;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 255, 0);
+    position: absolute;
+}
+
 .sendMessage {
     width: 22%;
     outline: solid;
