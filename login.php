@@ -22,7 +22,7 @@
                 <input type="submit" value="Login" class="LogintopL">
             </form>
         </div>
-        <form action="findAccount.php" method="POST">>
+        <form action="verifylogin.php" method="POST">>
             <div class="inputs">
                 <input type="text" name="username" class="username" placeholder="Enter username" required> <br>
                 <input type="password" name="password" class="passwordL" placeholder="Enter password" required>

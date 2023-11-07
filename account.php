@@ -47,6 +47,12 @@
                     echo '<div class="statNumberNameLikes"> Likes </div>';
                     echo '</div>';
                 }
+
+                echo '<form action="logout.php">';
+
+                echo '<input type="submit" value="logout"> </input>';
+                
+                echo '</form>';
             }
             else {
                 header("Location: login.php");
